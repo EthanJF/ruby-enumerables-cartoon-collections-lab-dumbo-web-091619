@@ -20,7 +20,7 @@ def find_the_cheese(array)
   result = nil
   while i < cheese_types.length
     if array.include?(cheese_types[i])
-      result = array.find(cheese_types[i])
+      result = array.find(cheese_types[i]){|j| j == cheese_types[i]}
       break
     end
     i += 1
